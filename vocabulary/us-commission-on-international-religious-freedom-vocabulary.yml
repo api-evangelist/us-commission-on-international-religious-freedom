@@ -1,0 +1,156 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: US Commission on International Religious Freedom
+  description: >-
+    Vocabulary taxonomy for USCIRF covering international religious freedom
+    country assessments, annual reports, CPC/SWL designations, and policy
+    recommendations to the U.S. government.
+  created: "2026-05-03"
+  modified: "2026-05-03"
+
+operational:
+  apis:
+    - name: Annual Reports
+      namespace: annual-reports
+      baseUrl: https://www.uscirf.gov/annual-reports
+      status: active
+    - name: Country Assessments
+      namespace: country-assessments
+      baseUrl: https://www.uscirf.gov/countries/2026-annual-report
+      status: active
+    - name: Publications
+      namespace: publications
+      baseUrl: https://www.uscirf.gov/publications
+      status: active
+
+  resources:
+    - name: country-assessments
+      description: Country-level religious freedom assessments with designation status
+      apis: [country-assessments]
+      actions: [list, get, filter]
+    - name: annual-reports
+      description: USCIRF annual reports with CPC and SWL designations
+      apis: [annual-reports]
+      actions: [list, get]
+    - name: policy-recommendations
+      description: Policy recommendations to U.S. President, Secretary of State, and Congress
+      apis: [publications]
+      actions: [list, get, filter]
+    - name: publications
+      description: Reports, policy briefs, and fact sheets
+      apis: [publications]
+      actions: [list, get, search]
+
+  actions:
+    - name: list
+      description: Retrieve a collection of records
+      pattern: read
+    - name: get
+      description: Retrieve a single record by identifier
+      pattern: read
+    - name: filter
+      description: Filter by country, year, designation status, or category
+      pattern: query
+    - name: search
+      description: Full-text search across reports and publications
+      pattern: query
+
+  schemas:
+    core:
+      - name: CountryAssessment
+        description: USCIRF assessment of a country's religious freedom conditions
+        key_properties: [country_name, report_year, designation_status, severity_level]
+      - name: AnnualReport
+        description: Full USCIRF annual report with all designations
+        key_properties: [report_year, title, cpc_countries, swl_countries, epc_entities]
+      - name: PolicyRecommendation
+        description: Specific policy recommendation to U.S. government
+        key_properties: [recommendation_id, report_year, addressee, category, recommendation_text]
+
+  parameters:
+    identifiers:
+      - name: country_name
+        description: Country name or ISO code
+      - name: recommendation_id
+        description: Unique recommendation identifier
+    filters:
+      - name: report_year
+        description: Filter by annual report year
+      - name: designation_status
+        description: Filter by CPC, SWL, or EPC status
+      - name: severity_level
+        description: Filter by violation severity level
+      - name: addressee
+        description: Filter recommendations by recipient
+
+  enums:
+    designation_status:
+      - Country of Particular Concern
+      - Special Watch List
+      - Entity of Particular Concern
+      - No Designation
+    severity_level:
+      - Particularly Severe
+      - Severe
+      - Serious
+      - Moderate
+      - Improving
+    violation_categories:
+      - Imprisonment of religious leaders
+      - Destruction of religious sites
+      - Blasphemy laws
+      - Apostasy laws
+      - Forced conversion
+      - Violence against minorities
+      - Discriminatory legislation
+
+capability:
+  workflows: []
+  personas:
+    - id: foreign-policy-analyst
+      name: Foreign Policy Analyst
+      description: Analyst monitoring U.S. foreign policy on international religious freedom
+      workflows: []
+    - id: human-rights-researcher
+      name: Human Rights Researcher
+      description: Academic or advocacy researcher studying international religious freedom conditions
+      workflows: []
+    - id: asylum-officer
+      name: Asylum Officer
+      description: Immigration official or attorney using USCIRF data to evaluate asylum claims
+      workflows: []
+    - id: congressional-staffer
+      name: Congressional Staffer
+      description: Congressional staff member using USCIRF recommendations for legislation
+      workflows: []
+
+  domains:
+    - name: Religious Freedom Monitoring
+      description: Tracking violations of international religious freedom
+    - name: Country Designations
+      description: CPC, SWL, and EPC designation process and criteria
+    - name: U.S. Policy Recommendations
+      description: Recommendations to executive and legislative branches
+
+crossReference:
+  - resource: country-assessments
+    operations:
+      - list by designation status
+      - filter by region
+      - get country details
+    workflows: []
+    personas: [foreign-policy-analyst, human-rights-researcher, asylum-officer]
+  - resource: annual-reports
+    operations:
+      - list historical reports
+      - get report by year
+    workflows: []
+    personas: [foreign-policy-analyst, human-rights-researcher, congressional-staffer]
+  - resource: policy-recommendations
+    operations:
+      - list by addressee
+      - filter by country
+      - filter by category
+    workflows: []
+    personas: [foreign-policy-analyst, congressional-staffer]

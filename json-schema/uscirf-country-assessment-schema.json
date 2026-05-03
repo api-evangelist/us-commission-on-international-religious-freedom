@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/us-commission-on-international-religious-freedom/refs/heads/main/json-schema/uscirf-country-assessment-schema.json",
+  "title": "CountryAssessment",
+  "description": "A USCIRF assessment of a country's international religious freedom conditions, including designation status and policy recommendations.",
+  "type": "object",
+  "properties": {
+    "country_name": {
+      "type": "string",
+      "description": "Name of the country being assessed.",
+      "example": "China"
+    },
+    "iso_code": {
+      "type": "string",
+      "description": "ISO 3166-1 alpha-2 country code.",
+      "example": "CN"
+    },
+    "report_year": {
+      "type": "integer",
+      "description": "Year of the USCIRF annual report covering this assessment.",
+      "example": 2026
+    },
+    "designation_status": {
+      "type": "string",
+      "description": "USCIRF recommended designation for this country.",
+      "enum": [
+        "Country of Particular Concern",
+        "Special Watch List",
+        "Entity of Particular Concern",
+        "No Designation"
+      ]
+    },
+    "state_department_designation": {
+      "type": "string",
+      "description": "Actual U.S. State Department designation, if different from USCIRF recommendation.",
+      "enum": [
+        "Country of Particular Concern",
+        "Special Watch List",
+        "Not Designated"
+      ]
+    },
+    "religious_minorities_at_risk": {
+      "type": "array",
+      "description": "Religious minority groups identified as facing persecution or discrimination.",
+      "items": {
+        "type": "string"
+      },
+      "example": ["Uyghur Muslims", "Falun Gong practitioners", "Tibetan Buddhists", "Christians"]
+    },
+    "key_violations": {
+      "type": "array",
+      "description": "Key categories of religious freedom violations documented.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Imprisonment of religious leaders",
+          "Destruction of religious sites",
+          "Blasphemy laws",
+          "Apostasy laws",
+          "Forced conversion",
+          "Violence against minorities",
+          "Registration restrictions",
+          "Discriminatory legislation",
+          "Torture of religious prisoners",
+          "Extrajudicial killings"
+        ]
+      }
+    },
+    "report_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to the full USCIRF country report."
+    },
+    "recommendations": {
+      "type": "array",
+      "description": "Policy recommendations USCIRF makes to the U.S. government regarding this country.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "severity_level": {
+      "type": "string",
+      "description": "Overall severity level of religious freedom violations.",
+      "enum": [
+        "Particularly Severe",
+        "Severe",
+        "Serious",
+        "Moderate",
+        "Improving"
+      ]
+    }
+  },
+  "required": ["country_name", "report_year", "designation_status"]
+}

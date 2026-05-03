@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/us-commission-on-international-religious-freedom/refs/heads/main/json-structure/uscirf-annual-report-structure.json",
+  "name": "AnnualReport",
+  "description": "A USCIRF annual report documenting international religious freedom conditions and providing policy recommendations to the U.S. government.",
+  "type": "object",
+  "properties": {
+    "report_year": {
+      "type": "int32",
+      "description": "Year of the annual report publication.",
+      "example": 2026
+    },
+    "title": {
+      "type": "string",
+      "description": "Full title of the annual report.",
+      "example": "2026 Annual Report of the United States Commission on International Religious Freedom"
+    },
+    "publication_date": {
+      "type": "date",
+      "description": "Date the report was published."
+    },
+    "cpc_countries": {
+      "type": "array",
+      "description": "Countries recommended for Country of Particular Concern designation.",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "Afghanistan",
+        "Burma",
+        "China",
+        "Cuba",
+        "Eritrea",
+        "India"
+      ]
+    },
+    "swl_countries": {
+      "type": "array",
+      "description": "Countries recommended for the Special Watch List.",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "Algeria",
+        "Azerbaijan",
+        "Egypt",
+        "Indonesia"
+      ]
+    },
+    "epc_entities": {
+      "type": "array",
+      "description": "Non-state actors recommended for Entity of Particular Concern designation.",
+      "items": {
+        "type": "string"
+      },
+      "example": [
+        "al-Shabaab",
+        "Boko Haram",
+        "the Houthis"
+      ]
+    },
+    "countries_assessed": {
+      "type": "int32",
+      "description": "Total number of countries assessed in the report.",
+      "minimum": 0
+    },
+    "report_url": {
+      "type": "uri",
+      "description": "URL to access the full annual report.",
+      "example": "https://www.uscirf.gov/countries/2026-annual-report"
+    },
+    "pdf_url": {
+      "type": "uri",
+      "description": "Direct URL to the PDF version of the annual report."
+    },
+    "key_themes": {
+      "type": "array",
+      "description": "Major thematic findings or focus areas for the reporting year.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "report_year",
+    "title",
+    "publication_date"
+  ]
+}

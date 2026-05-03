@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/us-commission-on-international-religious-freedom/refs/heads/main/json-schema/uscirf-policy-recommendation-schema.json",
+  "title": "PolicyRecommendation",
+  "description": "A USCIRF policy recommendation addressed to the U.S. President, Secretary of State, or Congress regarding international religious freedom.",
+  "type": "object",
+  "properties": {
+    "recommendation_id": {
+      "type": "string",
+      "description": "Unique identifier for the recommendation."
+    },
+    "report_year": {
+      "type": "integer",
+      "description": "Year of the annual report containing this recommendation.",
+      "example": 2026
+    },
+    "addressee": {
+      "type": "string",
+      "description": "Primary recipient of the recommendation.",
+      "enum": [
+        "President of the United States",
+        "Secretary of State",
+        "Congress",
+        "U.S. Ambassador-at-Large for International Religious Freedom"
+      ]
+    },
+    "country": {
+      "type": "string",
+      "description": "Country to which this recommendation pertains, if country-specific.",
+      "example": "China"
+    },
+    "category": {
+      "type": "string",
+      "description": "Category of the policy recommendation.",
+      "enum": [
+        "CPC Designation",
+        "Special Watch List",
+        "EPC Designation",
+        "Sanctions",
+        "Diplomatic Action",
+        "Legislation",
+        "Foreign Aid Conditions",
+        "Refugee and Asylum Policy",
+        "Multilateral Engagement"
+      ]
+    },
+    "recommendation_text": {
+      "type": "string",
+      "description": "Full text of the policy recommendation."
+    },
+    "rationale": {
+      "type": "string",
+      "description": "Explanation of the basis and rationale for the recommendation."
+    },
+    "related_violations": {
+      "type": "array",
+      "description": "Religious freedom violations that motivate this recommendation.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["recommendation_id", "report_year", "addressee", "category", "recommendation_text"]
+}

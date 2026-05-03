@@ -1,0 +1,120 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "uscirf": "https://www.uscirf.gov/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "AnnualReport": "uscirf:AnnualReport",
+    "CountryAssessment": "uscirf:CountryAssessment",
+    "PolicyRecommendation": "uscirf:PolicyRecommendation",
+    "addressee": {
+      "@id": "uscirf:addressee",
+      "@type": "xsd:string"
+    },
+    "category": {
+      "@id": "uscirf:category",
+      "@type": "xsd:string"
+    },
+    "countries_assessed": {
+      "@id": "uscirf:countries_assessed",
+      "@type": "xsd:integer"
+    },
+    "country": {
+      "@id": "uscirf:country",
+      "@type": "xsd:string"
+    },
+    "country_name": {
+      "@id": "uscirf:country_name",
+      "@type": "xsd:string"
+    },
+    "cpc_countries": {
+      "@id": "uscirf:cpc_countries",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "designation_status": {
+      "@id": "uscirf:designation_status",
+      "@type": "xsd:string"
+    },
+    "epc_entities": {
+      "@id": "uscirf:epc_entities",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "iso_code": {
+      "@id": "uscirf:iso_code",
+      "@type": "xsd:string"
+    },
+    "key_themes": {
+      "@id": "uscirf:key_themes",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "key_violations": {
+      "@id": "uscirf:key_violations",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "pdf_url": {
+      "@id": "uscirf:pdf_url",
+      "@type": "@id"
+    },
+    "publication_date": {
+      "@id": "uscirf:publication_date",
+      "@type": "xsd:date"
+    },
+    "rationale": {
+      "@id": "uscirf:rationale",
+      "@type": "xsd:string"
+    },
+    "recommendation_id": {
+      "@id": "uscirf:recommendation_id",
+      "@type": "xsd:string"
+    },
+    "recommendation_text": {
+      "@id": "uscirf:recommendation_text",
+      "@type": "xsd:string"
+    },
+    "recommendations": {
+      "@id": "uscirf:recommendations",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "related_violations": {
+      "@id": "uscirf:related_violations",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "religious_minorities_at_risk": {
+      "@id": "uscirf:religious_minorities_at_risk",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "report_url": {
+      "@id": "uscirf:report_url",
+      "@type": "@id"
+    },
+    "report_year": {
+      "@id": "uscirf:report_year",
+      "@type": "xsd:integer"
+    },
+    "severity_level": {
+      "@id": "uscirf:severity_level",
+      "@type": "xsd:string"
+    },
+    "state_department_designation": {
+      "@id": "uscirf:state_department_designation",
+      "@type": "xsd:string"
+    },
+    "swl_countries": {
+      "@id": "uscirf:swl_countries",
+      "@container": "@set",
+      "@type": "xsd:string"
+    },
+    "title": {
+      "@id": "uscirf:title",
+      "@type": "xsd:string"
+    }
+  }
+}

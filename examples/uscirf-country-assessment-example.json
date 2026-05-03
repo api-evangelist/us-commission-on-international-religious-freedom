@@ -1,0 +1,20 @@
+{
+  "country_name": "China",
+  "iso_code": "CN",
+  "report_year": 2026,
+  "designation_status": "Country of Particular Concern",
+  "state_department_designation": "Special Watch List",
+  "religious_minorities_at_risk": [
+    "China",
+    "Iran"
+  ],
+  "key_violations": [
+    "Registration restrictions",
+    "Destruction of religious sites"
+  ],
+  "report_url": "https://www.uscirf.gov/countries/2026-annual-report",
+  "recommendations": [
+    "China"
+  ],
+  "severity_level": "Particularly Severe"
+}
