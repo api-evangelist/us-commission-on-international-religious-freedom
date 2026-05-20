@@ -68,6 +68,8 @@ description: >-
   Particular Concern (CPCs) and Special Watch List (SWL) countries, and recommends
   Entities of Particular Concern (EPCs) among non-state actors.
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/us-commission-on-international-religious-freedom
   - type: Website
     url: https://www.uscirf.gov/
   - type: Documentation
