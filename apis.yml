@@ -6,6 +6,10 @@ apis:
       us-commission-on-international-religious-freedom:us-commission-on-international-religious-freedom
     name: US Commission on International Religious Freedom
     tags:
+      - Federal-Government
+      - Religious Freedom
+      - International Human Rights
+    tags_raw:
       - Federal Government
       - Religious Freedom
       - International Human Rights
@@ -48,6 +52,11 @@ apis:
       egregious violations of religious freedom.
 name: US Commission on International Religious Freedom
 tags:
+  - Federal-Government
+  - Religious Freedom
+  - International Human Rights
+  - Foreign Policy
+tags_raw:
   - Federal Government
   - Religious Freedom
   - International Human Rights
