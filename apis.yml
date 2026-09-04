@@ -89,7 +89,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/us-commiss
 access: 3rd-Party
 created: '2024-12-25'
 modified: '2026-05-03'
-position: Consumer
+position: Consuming
 description: >-
   The US Commission on International Religious Freedom (USCIRF) is an independent,
   bipartisan federal government commission created by the International Religious Freedom
