@@ -6,13 +6,14 @@ apis:
       us-commission-on-international-religious-freedom:us-commission-on-international-religious-freedom
     name: US Commission on International Religious Freedom
     tags:
-      - Federal-Government
+      - Federal Government
       - Religious Freedom
       - International Human Rights
     tags_raw:
       - Federal Government
       - Religious Freedom
       - International Human Rights
+      - Federal-Government
     humanURL: https://www.uscirf.gov/
     properties:
       - url: https://www.uscirf.gov/
@@ -52,7 +53,7 @@ apis:
       egregious violations of religious freedom.
 name: US Commission on International Religious Freedom
 tags:
-  - Federal-Government
+  - Federal Government
   - Religious Freedom
   - International Human Rights
   - Foreign Policy
@@ -61,6 +62,7 @@ tags_raw:
   - Religious Freedom
   - International Human Rights
   - Foreign Policy
+  - Federal-Government
 type: Index
 deliveryModel:
   model: saas
