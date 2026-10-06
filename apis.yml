@@ -90,7 +90,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/us-commission-on-international-religious-freedom.png
 access: 3rd-Party
 created: '2024-12-25'
-modified: '2026-05-03'
+modified: '2026-10-06'
 position: Consuming
 description: >-
   The US Commission on International Religious Freedom (USCIRF) is an independent,
@@ -102,6 +102,8 @@ description: >-
   Particular Concern (CPCs) and Special Watch List (SWL) countries, and recommends
   Entities of Particular Concern (EPCs) among non-state actors.
 common:
+  - url: https://www.uscirf.gov/rss.xml
+    type: BlogRSS
   - type: DomainSecurity
     url: security/us-commission-on-international-religious-freedom-domain-security.yml
   - type: LinkedIn
