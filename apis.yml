@@ -102,6 +102,12 @@ description: >-
   Particular Concern (CPCs) and Special Watch List (SWL) countries, and recommends
   Entities of Particular Concern (EPCs) among non-state actors.
 common:
+  - type: Plans
+    url: plans/us-commission-on-international-religious-freedom-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/us-commission-on-international-religious-freedom-rate-limits.yml
+  - type: FinOps
+    url: finops/us-commission-on-international-religious-freedom-finops.yml
   - url: https://www.uscirf.gov/rss.xml
     type: BlogRSS
   - type: DomainSecurity
